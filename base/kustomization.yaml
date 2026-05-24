@@ -7,8 +7,10 @@ resources:
 
 secretGenerator:
 - name: maria-db-secret
+  namespace: maria-db
   literals:
   - password=admin
 - name: database-access
+  namespace: maria-db
   literals:
   - password=admin
