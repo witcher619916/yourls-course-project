@@ -1,0 +1,16 @@
+iVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: maria-db-operator
+  namespace: maria-db
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: mariadb-operator
+      version: '26.3.0'
+      sourceRef:
+        kind: HelmRepository
+        name: maria-db
+        namespace: maria-db
+      interval: 10m
