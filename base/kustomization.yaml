@@ -6,8 +6,6 @@ resources:
 - maria-db-crs.yaml
 
 secretGenerator:
-generatorOptions:
-  disableNameSuffixHash: true
 - name: maria-db-secret
   namespace: maria-db
   literals:
@@ -16,3 +14,5 @@ generatorOptions:
   namespace: maria-db
   literals:
   - password=admin
+generatorOptions:
+  disableNameSuffixHash: true
