@@ -4,3 +4,11 @@ kind: Kustomization
 resources:
 - pv.yaml
 - maria-db-crs.yaml
+
+secretGenerator:
+- name: maria-db-secret
+  literals:
+  - password=admin
+- name: database-access
+  literals:
+  - password=admin
