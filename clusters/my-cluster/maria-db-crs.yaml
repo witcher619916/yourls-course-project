@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: maria-db-crs
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./base
+  dependsOn:
+    - name: maria-db-operator
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
