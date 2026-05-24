@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: maria-db-kustomize
+
+resources:
+- namespace.yaml
+- helm-repository.yaml
+- maria-db-crds.yaml
+- maria-db-operator.yaml
