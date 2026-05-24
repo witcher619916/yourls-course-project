@@ -5,13 +5,13 @@ metadata:
   namespace: maria-db
 spec:
   interval: 10m
+  dependsOn:
+    - name: maria-db-crds
+    - name: maria-db-operator
   chart:
     spec:
       chart: mariadb-cluster
       version: '26.3.0'
-      dependsOn:
-        - name: maria-db-crds
-        - name: maria-db-operator
       sourceRef:
         kind: HelmRepository
         name: maria-db
