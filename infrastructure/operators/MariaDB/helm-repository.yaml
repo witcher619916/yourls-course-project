@@ -1,0 +1,8 @@
+piVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: MariaDB
+  namespace: MariaDB
+spec:
+  interval: 1m
+  url: https://helm.mariadb.com/mariadb-operator
