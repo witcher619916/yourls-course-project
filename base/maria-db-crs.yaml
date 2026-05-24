@@ -1,0 +1,45 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: maria-db-crs
+  namespace: maria-db
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: mariadb-cluster
+      version: '26.3.0'
+      dependsOn:
+        - name: maria-db-crds
+        - name: maria-db-operator
+      sourceRef:
+        kind: HelmRepository
+        name: maria-db
+        namespace: maria-db
+      interval: 10m
+  values:
+    mariadb:
+      rootPasswordSecretKeyRef:
+        name: maria-db-secret
+        key: password
+        generate: false
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+      storage:
+        volumeClaimTemplate:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+          storageClassName: local-storage
+      replicas: 1
+      galera:
+        enabled: false
+      database: maria-db
+      username: admin
+      passwordSecretKeyRef:
+        name: database-access
+        key: password
+        generate: false
