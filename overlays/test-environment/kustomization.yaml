@@ -1,0 +1,18 @@
+piVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- pv-test.yaml
+- namespace.yaml
+
+secretGenerator:
+- name: maria-db-secret
+  namespace: maria-db
+  literals:
+  - password=admin
+- name: database-access
+  namespace: maria-db
+  literals:
+  - password=admin
+generatorOptions:
+  disableNameSuffixHash: true
