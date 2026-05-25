@@ -6,7 +6,9 @@ spec:
   interval: 10m
   dependsOn:
     - name: maria-db-crds
+      namespace: maria-db
     - name: maria-db-operator
+      namespace: maria-db
   chart:
     spec:
       chart: mariadb-cluster
