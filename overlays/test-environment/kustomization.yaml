@@ -14,6 +14,6 @@ secretGenerator:
 - name: database-access
   namespace: test-environment
   literals:
-  - password=admin
+  - mariadb-password=admin
 generatorOptions:
   disableNameSuffixHash: true
