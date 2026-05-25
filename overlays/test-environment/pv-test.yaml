@@ -3,5 +3,20 @@ kind: PersistentVolume
 metadata:
   name: maria-db-pv-test
 spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
   local:
     path: /mnt/maria-db-test
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: database
+          operator: In
+          values:
+          - maria-db
