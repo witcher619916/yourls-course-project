@@ -8,11 +8,11 @@ resources:
 
 secretGenerator:
 - name: maria-db-secret
-  namespace: maria-db
+  namespace: test-environment
   literals:
   - password=admin
 - name: database-access
-  namespace: maria-db
+  namespace: test-environment
   literals:
   - password=admin
 generatorOptions:
