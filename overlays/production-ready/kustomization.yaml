@@ -5,3 +5,4 @@ resources:
 - maria-db-secret.yaml
 - pv-prod.yaml
 - namespace.yaml
+- database-access.yaml
