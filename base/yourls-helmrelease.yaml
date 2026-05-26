@@ -22,6 +22,7 @@ spec:
       interval: 10m
   values:
     yourls:
+      domain: yourls.local
       username: admin
       password: admin
     podSecurityContext:
@@ -33,7 +34,7 @@ spec:
       host: maria-db-crs-mariadb-cluster
       port: 3306
       user: admin
-      database: maria-db-crs-mariadb-cluster-database
+      database: maria-db
       existingSecret: database-access
     service:
       type: ClusterIP
