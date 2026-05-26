@@ -42,5 +42,5 @@ spec:
       username: admin
       passwordSecretKeyRef:
         name: database-access
-        key: password
+        key: mariadb-password
         generate: false
