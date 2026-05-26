@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - maria-db-crs.yaml
 - yourls-helmrelease.yaml
+- ingressroute.yaml
