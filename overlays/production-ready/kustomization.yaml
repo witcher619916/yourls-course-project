@@ -7,3 +7,5 @@ resources:
 - namespace.yaml
 - database-access.yaml
 - yourls-secret.yaml
+- pv-prod-2.yaml
+- pv-prod-3.yaml
