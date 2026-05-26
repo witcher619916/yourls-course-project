@@ -1,0 +1,13 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yourls-route
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`yourls.local`)
+    kind: Rule
+    services:
+    - name: yourls
+      port: 80
