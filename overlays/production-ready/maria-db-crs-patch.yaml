@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: maria-db-crs
+spec:
+  values:
+    mariadb:
+      replicas: 3
+      galera:
+        enabled: true
