@@ -1,0 +1,40 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: yourls
+spec:
+  interval: 10m
+  dependsOn:
+    - name: maria-db-crs
+      namespace: test-environment
+    - name: maria-db-crds
+      namespace: maria-db
+    - name: maria-db-operator
+      namespace: maria-db
+  chart:
+    spec:
+      chart: yourls
+      version: '8.7.20'
+      sourceRef:
+        kind: HelmRepository
+        name: yourls-repo
+        namespace: flux-system
+      interval: 10m
+  values:
+    yourls:
+      username: admin
+      password: admin
+    podSecurityContext:
+      enabled: true
+      fsGroup: 1000
+    mariadb:
+      enabled: false
+    externalDatabase:
+      host: maria-db-crs-mariadb-cluster
+      port: 3306
+      user: admin
+      database: maria-db-crs-mariadb-cluster-database
+      existingSecret: database-access
+    service:
+      type: ClusterIP
+      port: 80
