@@ -3,5 +3,4 @@ kind: Kustomization
 
 resources:
 - maria-db-crs.yaml
-- yourls-helmrepo.yaml
 - yourls-helmrelease.yaml
