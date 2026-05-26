@@ -22,7 +22,7 @@ spec:
       interval: 10m
   values:
     yourls:
-      domain: yourls.local
+      domain: yourls.local:30000
       username: admin
       password: admin
     podSecurityContext:
