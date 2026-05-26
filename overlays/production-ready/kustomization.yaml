@@ -6,3 +6,4 @@ resources:
 - pv-prod.yaml
 - namespace.yaml
 - database-access.yaml
+- yourls-secret.yaml
