@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: production-ready
 resources:
 - maria-db-secret.yaml
-- pv-prod.yaml
+- pv-prod-1.yaml
 - namespace.yaml
 - database-access.yaml
 - yourls-secret.yaml
