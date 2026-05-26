@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: database-access
+type: kubernetes.io/basic-auth
+stringData:
+    password: ENC[AES256_GCM,data:Y85p+z7Z8EAL,iv:Zpkr7B5RUTaOywKz7rapk/7iBtkGQXUpvSYtfAr0/6g=,tag:ctu/+ZJpnaasSblEoaJieA==,type:str]
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBOb1lHaVArMDBwaVltY3NN
+            OVIwcHlZY00yalEvbFNVNFl6WUJuOG4relE4CjhnYVI0Y3RNMzdNeGhEOTFSWFRn
+            V2NSQW5Mb0x3UURBVmMrMk11eWdaQlkKLS0tIHZrdU1UVFNvOFZ2Z3ZGaXJhalFZ
+            UHNjKzM1RmFlblFzcmQ5cWNqSnhlUG8KFoMoVe4T6q43AsrpCwIr7ro6FHUI2Kyc
+            AzoqzmYPyD3bOUcLE8/LCGDN/uZMUAAtt4lzO6igIhMi5eAnFfgr4A==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age1kwd98tcgdnn067kv43xj2uwjnuylpmhw9k8jqd2gduswgk6u7fpsn7my9y
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-05-26T19:53:25Z"
+    mac: ENC[AES256_GCM,data:Vx7ORVN5swEWdXbWme+hp+ERQdbidZHUkZkFXQXW7KpU2lwQNv3g8Z/9TS891ztHwH6uGk9QTb835TcFFKnNF19BA1vKsMPZY0xXdQO90W5qMBpj7nSLKlabPWvnSC7GBnYGjSoFjpGulDbjjN/z66MRGKsP5bGvcvRdkzoMFhA=,iv:FPi8z9ysIvxQ5jx+N7iZuLIGW8vPlZMsTck1HLK+rj0=,tag:Yxr1rk2tcDioKXBSLcZ0Og==,type:str]
+    version: 3.13.1
