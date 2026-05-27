@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: database-access
-type: kubernetes.io/basic-auth
+type: Opaque
 stringData:
     mariadb-password: ENC[AES256_GCM,data:DP0SplVku+Ip,iv:fEoC6uE/sT7TrjiUCdZSsK03Gj8rFP7gGr/pmJjjQTw=,tag:u0l78Nddc2maKBtcGd7rKA==,type:str]
 sops:
@@ -17,6 +17,6 @@ sops:
             -----END AGE ENCRYPTED FILE-----
           recipient: age1kwd98tcgdnn067kv43xj2uwjnuylpmhw9k8jqd2gduswgk6u7fpsn7my9y
     encrypted_regex: ^(data|stringData)$
-    lastmodified: "2026-05-27T09:31:44Z"
-    mac: ENC[AES256_GCM,data:+CmrvxHxSX/qWRN4eNSmiSRbSYpnwft4IOyYknDlnjTzfflc6kvoQH5kqzyb6t8k4d34eN7+SM7U+a3LoMW2e9C4ZvNcbgvPOeTq86LrmLkSzyytpuX4z2mrnPqsDd2K778coDHhevJe2SelqYppQEdswNxgB2lHKdp3iUOPO78=,iv:kmXdrzPcq3WKMPJBVpCuzgRmu0SwwoNg5kcsuhgzogY=,tag:TEDgg2FvIwkri+7tdRhFnw==,type:str]
+    lastmodified: "2026-05-27T09:36:10Z"
+    mac: ENC[AES256_GCM,data:2vESw5IIGZvpOgKi3md18B1OOHNJ3FxbYlHpJvFncJrQ8lhhpTvHWLIgyn0EJlwbP5DTuBYWOjU9QI53C9KmyEGLGk8SZx2tfj8ZcU5+2uvCCbXtQ8otcZrUM9tZUevcE7Fcq0TQV68Jj9BEZiR7Xr42Qwz3Q/l8ZN3Zni3prys=,iv:W7ZIBzOSX8tc3bn+NOGFbokQRiReHHw/7mC2FRJa+5k=,tag:rVLYmVuhCLZcGdHTpSxpwg==,type:str]
     version: 3.13.1
