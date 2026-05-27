@@ -5,7 +5,7 @@ metadata:
 spec:
   values:
     yourls:
-      domain: https://yourls.salo-ua.com
+      domain: "https://yourls.salo-ua.com"
       existingSecret: yourls-secret
     persistence:
       enabled: true
