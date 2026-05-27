@@ -16,3 +16,4 @@ resources:
 patches:
   - path: maria-db-crs-patch.yaml
   - path: yourls-patch.yaml
+  - path: ingressroute-patch.yaml
