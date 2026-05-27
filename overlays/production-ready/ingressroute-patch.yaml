@@ -9,3 +9,5 @@ spec:
     services:
     - name: yourls
       port: 80
+    middlewares:
+    - name: yourls-secure-headers
