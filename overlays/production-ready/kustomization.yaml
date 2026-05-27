@@ -12,6 +12,7 @@ resources:
 - pv-prod-3.yaml
 - pv-yourls.yaml
 - HPA.yaml
+- cloudflared-token.yaml
 
 patches:
   - path: maria-db-crs-patch.yaml
