@@ -24,3 +24,11 @@ This namespace is built for high availability, security, and external access.
 HTTPS encryption terminates at the Cloudflare Edge network. The `cloudflared` tunnel forwards this traffic to the local Traefik service, which handles internal routing to YOURLS. 
 
 Because the internal cluster traffic travels over HTTP, Traefik must explicitly pass the `X-Forwarded-Proto: https` header down to the YOURLS pods. This is handled via a Traefik **Middleware** custom resource. Without this header, YOURLS suffers from a **Mixed Content Mismatch error**, causing the URL creation AJAX requests to spin indefinitely in the browser.
+
+## 🚀 Proof of Work (Live Example)
+
+The entire pipeline—from Cloudflare SSL termination down to the Galera-backed backend—is fully verified and operational. 
+
+Below is an example of a secure, production-generated shortened link pointing to a target destination:
+* **Live Short Link:** `https://yourls.salo-ua.com/zhytomyr`
+* **Target Destination:** `Zhytomyr - Wikipedia https://yourls.salo-ua.com/zhytomyr`
