@@ -4,7 +4,7 @@ metadata:
   name: yourls-route
 spec:
   routes:
-  - match: Host(`yourls.local.prod`)
+  - match: Host(`yourls.salo-ua.com`)
     kind: Rule
     services:
     - name: yourls
