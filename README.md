@@ -4,6 +4,8 @@ This project is built around **YOURLS** (a self-hosted URL shortener) and **Mari
 
 The infrastructure is split into two distinct namespaces representing different environments: `test-environment` and `production-ready`.
 
+MariaDB and YOURLS components across both environments are fully managed, installed, and kept in sync via **HelmReleases**.
+
 ### 1. Test Environment (`test-environment`)
 This namespace is designed for local development and quick validation.
 * **Database:** Launches a single replica of MariaDB. Configuration of custom resources (`mariadbs`, `databases`, `users`, `grants`) is automated.
