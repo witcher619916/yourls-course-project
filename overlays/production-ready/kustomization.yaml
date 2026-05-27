@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: production-ready
 resources:
+- ../../base
 - maria-db-secret.yaml
 - pv-prod-1.yaml
 - namespace.yaml
@@ -11,5 +12,6 @@ resources:
 - pv-prod-3.yaml
 - pv-yourls.yaml
 
-#patches:
-#  - path: maria-db-crs-patch.yaml
+patches:
+  - path: maria-db-crs-patch.yaml
+  - path: yourls-patch.yaml
