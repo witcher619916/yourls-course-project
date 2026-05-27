@@ -5,6 +5,7 @@ metadata:
 spec:
   values:
     yourls:
+      domain: yourls.local.prod:30000
       existingSecret: yourls-secret
     persistence:
       enabled: true
