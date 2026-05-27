@@ -14,6 +14,7 @@ resources:
 - HPA.yaml
 - cloudflared-token.yaml
 - cloudflared.yaml
+- middleware.yaml
 
 patches:
   - path: maria-db-crs-patch.yaml
