@@ -9,3 +9,6 @@ resources:
 - yourls-secret.yaml
 - pv-prod-2.yaml
 - pv-prod-3.yaml
+
+patches:
+  - path: maria-db-crs-patch.yaml
