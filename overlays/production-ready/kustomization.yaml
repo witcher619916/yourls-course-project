@@ -11,6 +11,7 @@ resources:
 - pv-prod-2.yaml
 - pv-prod-3.yaml
 - pv-yourls.yaml
+- HPA.yaml
 
 patches:
   - path: maria-db-crs-patch.yaml
